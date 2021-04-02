@@ -8,15 +8,18 @@
 // Количество элементов: 4
 
 
-const categoriesLength = document.querySelectorAll(".item");
-const length = categoriesLength.length
-console.log(length)
-const categories = document.querySelector("ul").children;
-console.log(categories)
-// const elementCategories = document.querySelector("ul").children;
-//    for (let i=0, child; child=elementChildrens[i]; i++) {
-//         // elementChildrens - коллекция детей списка
-//         // child - последовательно, каждый из элементов elementChildrens
-//         alert(child.innerHTML);
-// }
-//    console.log(elementCategories)
+// const categoriesLength = document.querySelectorAll(".item");
+// const length = categoriesLength.length
+// console.log(length)
+// const categories = document.querySelector(".item").children;
+// console.log(categories)
+// // const textTitle = categories.forEach(categoria => categoria)
+// // console.log(textTitle)
+
+const catogoriesValue = document.querySelector( `#categories` ).children.length;
+console.log( `В списке ${catogoriesValue} категории` );
+const categoryArray = document.querySelectorAll( `.item` );
+for( let elem of categoryArray ) {
+    console.log( `Категория: `, elem.firstElementChild.textContent );
+    console.log( `Количество элемментов: `, elem.lastElementChild.children.length )
+};
