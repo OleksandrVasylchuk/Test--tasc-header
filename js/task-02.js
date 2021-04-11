@@ -11,14 +11,14 @@ const ingredients = [
   'Приправы',
 ];
 
-const itemUL = document.createElement("ul");
+const itemUL =  document.querySelector('#ingredients');
+
 const element = ingredients.map(ingredient => {
-
-    const item = document.createElement("li");
-    itemUL.appendChild(item);
-    document.body.appendChild(itemUL);
-    item.textContent = ingredient;
-
-    return itemUL;
+  const item = document.createElement("li");
+  item.textContent = ingredient;
+  itemUL.appendChild(item);
+  return item;
+  
 });
-console.log(itemUL)
+itemUL.append(...element);
+  
